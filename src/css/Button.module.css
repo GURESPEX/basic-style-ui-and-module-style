@@ -1,0 +1,99 @@
+.btn1 {
+  position: relative;
+  top: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  border: none;
+  color: #fff;
+  background: #ec7063;
+  box-shadow: 0 0.25rem #cd6155, 0 0.25rem 0.25rem #000;
+  border-radius: 0.25rem;
+  transition: 0.2s;
+}
+.btn1:hover {
+  cursor: pointer;
+  background: #ec7063;
+  top: -0.25rem;
+  box-shadow: 0 0.5rem #cd6155, 0 0.5rem 0.25rem #000;
+}
+.btn1:active {
+  background: #ec7063;
+  top: 0.125rem;
+  box-shadow: 0 0.125rem #cd6155, 0 0.125rem 0.25rem #000;
+}
+
+.btn2 {
+  position: relative;
+  top: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  border: none;
+  color: #fff;
+  background: #3f865e;
+  box-shadow: 0 0.25rem #39624c, 0 0.25rem 0.25rem #000;
+  border-radius: 0.25rem;
+  transition: 0.2s;
+}
+.btn2:hover {
+  cursor: pointer;
+  background: #3f865e;
+  top: -0.25rem;
+  box-shadow: 0 0.5rem #39624c, 0 0.5rem 0.25rem #000;
+}
+.btn2:active {
+  background: #3f865e;
+  top: 0.125rem;
+  box-shadow: 0 0.125rem #39624c, 0 0.125rem 0.25rem #000;
+}
+
+.btn3 {
+  position: relative;
+  top: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  border: none;
+  color: #fff;
+  background: #3889bd;
+  box-shadow: 0 0.25rem #367195, 0 0.25rem 0.25rem #000;
+  border-radius: 0.25rem;
+  transition: 0.2s;
+}
+.btn3:hover {
+  cursor: pointer;
+  background: #3889bd;
+  top: -0.25rem;
+  box-shadow: 0 0.5rem #367195, 0 0.5rem 0.25rem #000;
+}
+.btn3:active {
+  background: #3889bd;
+  top: 0.125rem;
+  box-shadow: 0 0.125rem #367195, 0 0.125rem 0.25rem #000;
+}
+
+.btn4 {
+  position: relative;
+  top: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  border: none;
+  color: #fff;
+  background: linear-gradient(0deg, #59aefd 0%, #e06ee2 50%);
+  box-shadow: 0 0.25rem #367195, 0 0.25rem 0.25rem #000;
+  border-radius: 0.25rem;
+  transition: 0.2s;
+}
+.btn4:hover {
+  cursor: pointer;
+  background: linear-gradient(0deg, #59aefd 0%, #e06ee2 50%);
+  top: -0.25rem;
+  box-shadow: 0 0.5rem #367195, 0 0.5rem 0.25rem #000;
+}
+.btn4:active {
+  background: linear-gradient(0deg, #59aefd 0%, #e06ee2 50%);
+  top: 0.125rem;
+  box-shadow: 0 0.125rem #367195, 0 0.125rem 0.25rem #000;
+}
