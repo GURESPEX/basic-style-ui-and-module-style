@@ -8,7 +8,7 @@ const TourBox = ({ img, title, price, star }: Tour) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        width: "222px",
+        width: "100%",
         borderRadius: "1rem",
         overflow: "hidden",
         outline: "2px solid #0002",

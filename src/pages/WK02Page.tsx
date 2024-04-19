@@ -19,6 +19,7 @@ const WK02Page = () => {
             display: "flex",
             flexDirection: "column",
             gap: "3rem",
+            alignItems: "center",
           }}
         >
           <div
@@ -42,10 +43,11 @@ const WK02Page = () => {
               flexDirection: "row",
               justifyContent: "center",
               gap: "4rem",
+              flexWrap: "wrap",
             }}
           >
-            {values.map((value: Value) => (
-              <ValueBox {...value} />
+            {values.map((value: Value, index: number) => (
+              <ValueBox key={index} {...value} />
             ))}
           </div>
         </section>
@@ -60,8 +62,9 @@ const WK02Page = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
               gap: "3rem",
+              width: "100%",
+              maxWidth: "1024px",
             }}
           >
             <h2
@@ -74,23 +77,31 @@ const WK02Page = () => {
             >
               Choose your tour
             </h2>
-            <div style={{ display: "flex", flexDirection: "row", gap: "2rem" }}>
-              {tours.map((tour: Tour) => (
-                <TourBox {...tour} />
-              ))}
-            </div>
-            <button
+            <div
               style={{
-                fontSize: "large",
-                fontWeight: "bold",
-                padding: "1rem 3rem",
-                border: "1px solid #000",
-                background: "none",
-                borderRadius: 9999,
+                display: "flex",
+                flexDirection: "row",
+                gap: "2rem",
               }}
             >
-              See all
-            </button>
+              {tours.map((tour: Tour, index: number) => (
+                <TourBox key={index} {...tour} />
+              ))}
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button
+                style={{
+                  fontSize: "large",
+                  fontWeight: "bold",
+                  padding: "1rem 3rem",
+                  border: "1px solid #000",
+                  background: "none",
+                  borderRadius: 9999,
+                }}
+              >
+                See all
+              </button>
+            </div>
           </div>
         </section>
       </Main>

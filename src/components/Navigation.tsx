@@ -26,8 +26,9 @@ const Navigation = () => {
           gap: "2rem",
         }}
       >
-        {navMenus.map(({ name }) => (
+        {navMenus.map(({ name }, index: number) => (
           <button
+            key={index}
             style={{
               background: "none",
               border: "none",
