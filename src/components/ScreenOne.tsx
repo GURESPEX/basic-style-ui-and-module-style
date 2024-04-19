@@ -92,7 +92,7 @@ export default function ScreenOne() {
               </div>
               <div className="flex flex-row items-center gap-2 text-green-600 font-semibold">
                 <div className="">
-                  <FaArrowUp />
+                  <FaArrowDown />
                 </div>
                 <div className="">$9,302.00</div>
               </div>
@@ -104,7 +104,7 @@ export default function ScreenOne() {
               </div>
               <div className="flex flex-row items-center gap-2 text-red-600 font-semibold">
                 <div className="">
-                  <FaArrowDown />
+                  <FaArrowUp />
                 </div>
                 <div className="">$2,790.00</div>
               </div>

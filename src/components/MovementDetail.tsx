@@ -39,7 +39,7 @@ export default function MovementDetail({
             } font-semibold items-center`}
           >
             <div className="">${price}</div>
-            <div className="">{deposit ? <FaArrowUp /> : <FaArrowDown />}</div>
+            <div className="">{deposit ? <FaArrowDown /> : <FaArrowUp />}</div>
           </div>
         </div>
       </div>
