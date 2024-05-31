@@ -9,12 +9,24 @@ import { HiMenuAlt1 } from "react-icons/hi";
 
 import MovementDetail from "./MovementDetail";
 import Screen from "./Screen";
+import { useEffect, useRef, useState } from "react";
 
 export default function ScreenTwo() {
+  const IE = useRef(null);
+  const [IEHeight, setIEHeight] = useState(0);
+
+  console.log(IE);
+
+  useEffect(() => {
+    setIEHeight(IE.current ? IE.current.offsetHeight : 0);
+  }, []);
+
   return (
     <Screen>
-      <div className="absolute w-full h-[330px] bg-gradient-to-b from-cyan-800 to-cyan-950"></div>
-      <div className="flex flex-col z-50">
+      <div
+        style={{ paddingBottom: IEHeight / 2 + 16 }}
+        className="relative bg-gradient-to-b from-cyan-800 to-cyan-950"
+      >
         <div className="flex flex-row justify-between items-center p-4 text-white">
           <div className="text-2xl">
             <HiMenuAlt1 />
@@ -35,7 +47,7 @@ export default function ScreenTwo() {
                 </div>
                 <div className="text-white font-thin text-3xl">7,392.00</div>
               </div>
-              <div className="flex font-thin text-sm text-cyan-600">
+              <div className="flex font-thin text-sm text-white mix-blend-overlay">
                 June 8, 2018
               </div>
             </div>
@@ -62,34 +74,39 @@ export default function ScreenTwo() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="px-4 my-6">
-          <div className="flex flex-row items-center w-full p-4 gap-4 bg-white border drop-shadow-sm rounded-md">
-            <div className="flex flex-col flex-1 items-center gap-2">
-              <div className="px-4 py-1 border rounded-full text-xs font-semibold text-cyan-700">
-                Income
-              </div>
-              <div className="flex flex-row items-center gap-2 text-green-600 font-semibold">
-                <div className="">
-                  <FaArrowDown />
+          <div
+            ref={IE}
+            className="absolute w-full top-full -translate-y-1/2 px-4"
+          >
+            <div className="flex flex-row items-center w-full p-4 gap-4 bg-white border drop-shadow-sm rounded-md">
+              <div className="flex flex-col flex-1 items-center gap-2">
+                <div className="px-4 py-1 border rounded-full text-xs font-semibold text-cyan-700">
+                  Income
                 </div>
-                <div className="">$9,302.00</div>
-              </div>
-            </div>
-            <div className="w-[1px] bg-slate-200 h-1/2"></div>
-            <div className="flex flex-col flex-1 items-center gap-2">
-              <div className="px-4 py-1 border rounded-full text-xs font-semibold text-cyan-700">
-                Expense
-              </div>
-              <div className="flex flex-row items-center gap-2 text-red-600 font-semibold">
-                <div className="">
-                  <FaArrowUp />
+                <div className="flex flex-row items-center gap-2 text-green-600 font-semibold">
+                  <div className="">
+                    <FaArrowDown />
+                  </div>
+                  <div className="">$9,302.00</div>
                 </div>
-                <div className="">$2,790.00</div>
+              </div>
+              <div className="w-[1px] bg-slate-200 h-1/2"></div>
+              <div className="flex flex-col flex-1 items-center gap-2">
+                <div className="px-4 py-1 border rounded-full text-xs font-semibold text-cyan-700">
+                  Expense
+                </div>
+                <div className="flex flex-row items-center gap-2 text-red-600 font-semibold">
+                  <div className="">
+                    <FaArrowUp />
+                  </div>
+                  <div className="">$2,790.00</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div style={{ paddingTop: IEHeight / 2 + 16 }} className="flex flex-col">
         <div className="flex flex-col gap-2 px-4">
           <div className="flex flex-row items-center gap-4">
             <div className="flex-1 font-semibold text-md text-cyan-800">
